@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aseguramos que la app ocupe toda la altura de la pantalla */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita scroll doble */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f0f4f9; /* Fondo base estilo Gemini */
+}
+
+/* --- ESTILO DE SCROLLBAR (Barra de desplazamiento elegante) --- */
+/* Esto hace que la barra sea finita y redondeada como en Gemini */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #dfe4ea;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #c0c7d0;
+}
